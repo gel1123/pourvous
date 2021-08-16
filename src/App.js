@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import header_img from './img/header_chocolat_2.jpg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="bd-example">  
+        <ul className="dropdown-menu">
+          <li><h6 className="dropdown-header">Dropdown header</h6></li>
+          <li><a className="dropdown-item" href="#">Action</a></li>
+          <li><a className="dropdown-item" href="#">Another action</a></li>
+        </ul>
+      </div>
+      <div className="container">
+        <img src={header_img} style={{width:"100%"}}/>
+      </div>
     </div>
   );
 }
