@@ -1,6 +1,7 @@
 import header_img from './img/header_chocolat_2.jpg';
 import './App.css';
 import { useState } from 'react';
+import AppCard from './AppCard';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,65 +18,87 @@ function App() {
       </div>
       <div className="app-menu" style={
         showMenu ? {
-          opacity: 1,
-          height: "100%"
+          height: "calc(100% - 60px)"
         } : {
-          opacity: 0,
           height: "0%"
         }
       }>
         <nav>
           <ul>
             <li>
-              <div>商品紹介</div>
-              <hr/>
+              <div className="nav-title">商品紹介</div>
+              <hr className="nav-title-bar"/>
+              <div className="nav-item">
+                <div className="nav-item-card">
+                  card1
+                </div>
+                <div className="nav-item-card">
+                  card2
+                </div>
+                <div className="nav-item-card">
+                  card3
+                </div>
+                <div className="nav-item-card">
+                  card4
+                </div>
+              </div>
             </li>
             <li>
-              <div>オススメ商品</div>
-              <hr/>
+              <div className="nav-title">オススメ商品</div>
+              <hr className="nav-title-bar"/>
+              <div className="nav-item">
+                <div className="nav-item-card">
+                  card1
+                </div>
+                <div className="nav-item-card">
+                  card2
+                </div>
+                <div className="nav-item-card">
+                  card3
+                </div>
+                <div className="nav-item-card">
+                  card4
+                </div>
+              </div>
             </li>
             <li>
-              <div>ギフト</div>
-              <hr/>
+              <div className="nav-title">ギフト</div>
+              <hr className="nav-title-bar"/>
+              <div className="nav-item">
+                <div className="nav-item-card">
+                  card1
+                </div>
+                <div className="nav-item-card">
+                  card2
+                </div>
+              </div>
             </li>
             <li>
-              <div>アクセス</div>
-              <hr/>
+              <div className="nav-title">アクセス</div>
+              <hr className="nav-title-bar"/>
+              <div className="nav-item">
+                <div className="nav-item-card">
+                  card1
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="app-heading">
-        heading
-      </div>
-      <div className="app-main">
-        <div className="app-card app-card-wide">
-          card1
+      <div className="app-body">
+        <div className="app-heading">
+          <img src={header_img} alt="トップ画像"/>
         </div>
-        <div className="app-card">
-          card2
-        </div>
-        <div className="app-card">
-          card3
-        </div>
-        <div className="app-card">
-          card4
-        </div>
-        <div className="app-card">
-          card5
-        </div>
-        <div className="app-card">
-          card6
-        </div>
-        <div className="app-card">
-          card7
-        </div>
-        <div className="app-card">
-          card8
+        <div className="app-main">
+          <AppCard data={{name: "card1", classappend: "app-card-wide"}}/>
+          <AppCard data={{name: "card2"}}/>
+          <AppCard data={{name: "card3"}}/>
+          <AppCard data={{name: "card4"}}/>
+          <AppCard data={{name: "card5"}}/>
         </div>
       </div>
     </div>
-  );
-}
+  );  
+} 
 
-export default App;
+export   default App;

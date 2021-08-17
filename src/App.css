@@ -1,3 +1,7 @@
+img {
+    width: 100%;
+}
+
 .app-base {
     height: 100%;
 }
@@ -43,11 +47,14 @@
     width: 100%;
     transition: all 1s 0s ease;
     text-align: center;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.app-body {
+    transition: all 1s 0s ease;
 }
 .app-heading {
-    background-color: rgba(0, 100, 0, 0.3);
-    border: 1px dotted;
-    height:270px;
+    width: 100%;
 }
 .app-main {
     display: flex;
@@ -57,18 +64,34 @@
     background-color: rgba(100, 0, 0, 0.3);
     border: 1px dotted;
 }
-.app-card {
+.nav-title {
+    font-size: larger;
+    font-weight: lighter;
+}
+.nav-title-bar {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: rgba(100, 0, 0, 0.3);
     border: 1px dotted;
-    height: 220px;
-    width: 150px;
-    margin: 8px
 }
-.app-card-wide {
-    width: 300px;
+.nav-item-card {
+    background-color: rgba(100, 0, 0, 0.3);
+    border: 1px dotted;
+    height: 50px;
+    width: 130px;
+    margin: 8px
 }
 ul {
     list-style: none;
     padding-inline-start: 0px;
     margin: 16px;
+}
+li {
+    margin-bottom: 15px;
 }

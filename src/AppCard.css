@@ -1,0 +1,10 @@
+.app-card {
+    background-color: rgba(100, 0, 0, 0.3);
+    border: 1px dotted;
+    height: 220px;
+    width: 150px;
+    margin: 8px
+}
+.app-card-wide {
+    width: 300px;
+}
