@@ -1,4 +1,4 @@
-import header_img from './img/header_chocolat_2.jpg';
+import header_img from './img/透過png/クロカンショコラ.png';
 import './App.css';
 import { useState } from 'react';
 import AppCard from './AppCard';
@@ -12,7 +12,7 @@ function App() {
     <div className="app-base">
       <header className="app-header">
         <span className="app-header-ham" onClick={onClickHam}>≡</span>
-        <span className="app-header-center">header</span>
+        <span className="app-header-center">「チョコレートケーキが得意」な洋菓子屋さん<br/>pour vous（プール・ヴー）</span>
       </header>
       <div className="app-header-dummy">
       </div>

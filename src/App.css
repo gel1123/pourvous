@@ -1,7 +1,6 @@
 img {
     width: 100%;
 }
-
 .app-base {
     height: 100%;
 }
@@ -11,14 +10,14 @@ img {
     display: inline-block;
     width: 100%;
     height: 60px;
-    background-color: rgba(200, 200, 255);
-    border: 1px dotted;
     padding: 12px;
+    background-color: rgba(97, 47, 12, 0.7);
+    color: white;
 }
 .app-header-dummy {
     width: 100%;
     height: 60px;
-    background-color: white;
+    background-color: rgb(255, 245, 225);
 }
 .app-header-center {
     box-sizing: border-box;
@@ -28,6 +27,7 @@ img {
     position: fixed;
     left: 0px;
     z-index: 1;
+    font-size: 12px;
 }
 .app-header-ham {
     box-sizing: border-box;
@@ -35,14 +35,11 @@ img {
     width: 10%;
     text-align: center;
     position: fixed;
-    background-color: rgba(0, 0, 100, 0.3);
-    border: 1px dotted;
     font-size: 24px;
     z-index: 10;
 }
 .app-menu {
     background-color: white;
-    border: 1px dotted;
     position: fixed;
     width: 100%;
     transition: all 1s 0s ease;
@@ -55,14 +52,13 @@ img {
 }
 .app-heading {
     width: 100%;
+    margin: auto;
 }
 .app-main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(100, 0, 0, 0.3);
-    border: 1px dotted;
 }
 .nav-title {
     font-size: larger;
@@ -77,12 +73,8 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(100, 0, 0, 0.3);
-    border: 1px dotted;
 }
 .nav-item-card {
-    background-color: rgba(100, 0, 0, 0.3);
-    border: 1px dotted;
     height: 50px;
     width: 130px;
     margin: 8px
