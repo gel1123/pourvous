@@ -42,6 +42,7 @@
     position: fixed;
     width: 100%;
     transition: all 1s 0s ease;
+    text-align: center;
 }
 .app-heading {
     background-color: rgba(0, 100, 0, 0.3);
@@ -64,9 +65,10 @@
     margin: 8px
 }
 .app-card-wide {
-    background-color: rgba(100, 0, 0, 0.3);
-    border: 1px dotted;
-    height: 220px;
     width: 300px;
-    margin: 8px
+}
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+    margin: 16px;
 }

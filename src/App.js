@@ -9,10 +9,10 @@ function App() {
   };
   return (
     <div className="app-base">
-      <div className="app-header">
+      <header className="app-header">
         <span className="app-header-ham" onClick={onClickHam}>≡</span>
         <span className="app-header-center">header</span>
-      </div>
+      </header>
       <div className="app-header-dummy">
       </div>
       <div className="app-menu" style={
@@ -24,7 +24,26 @@ function App() {
           height: "0%"
         }
       }>
-        menu
+        <nav>
+          <ul>
+            <li>
+              <div>商品紹介</div>
+              <hr/>
+            </li>
+            <li>
+              <div>オススメ商品</div>
+              <hr/>
+            </li>
+            <li>
+              <div>ギフト</div>
+              <hr/>
+            </li>
+            <li>
+              <div>アクセス</div>
+              <hr/>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div className="app-heading">
         heading
