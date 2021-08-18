@@ -3,6 +3,15 @@ import './App.css';
 import { useState } from 'react';
 import AppCard from './AppCard';
 
+// 子要素に渡す画像
+import img_hc1 from './img/ホールケーキ/いちごのロールケーキ01.jpg';
+import img_hc2 from './img/ホールケーキ/ガトーショコラ01.jpg';
+import img_hc3 from './img/ホールケーキ/シフォン01.jpg';
+import img_hc4 from './img/ホールケーキ/タルトフレーズ01.jpg';
+import img_hc5 from './img/ホールケーキ/チーズケーキ01.jpg';
+import img_hc6 from './img/ホールケーキ//レアチーズ01.jpg';
+import img_hc7 from './img/ホールケーキ/生デコ01.jpg';
+
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const onClickHam = (e) => {
@@ -122,11 +131,37 @@ function App() {
           <img src={header_img} alt="トップ画像"/>
         </div>
         <div className="app-main">
-          <AppCard data={{name: "card1", classappend: "app-card-wide"}}/>
-          <AppCard data={{name: "card2"}}/>
-          <AppCard data={{name: "card3"}}/>
-          <AppCard data={{name: "card4"}}/>
-          <AppCard data={{name: "card5"}}/>
+          <AppCard data={{
+            title: "商品紹介_ホールケーキ",
+            nameList: [
+              "いちごのロールケーキ",
+              "ガトーショコラ",
+              "シフォン",
+              "タルトフレーズ",
+              "チーズケーキ",
+              "レアチーズ",
+              "生デコ"
+            ],
+            imgList: [
+              img_hc1, img_hc2, img_hc3, img_hc4, img_hc5, img_hc6, img_hc7
+            ],
+            mesList: [
+              // いちごのロールケーキ
+              <div>ソフトな生地に純生クリームといちごをまいて仕上げにフルーツをのせました。</div>,
+              // ガトーショコラ
+              <div>チョコレートをたっぷり使った焼き菓子。<br/>チョコレートのしっかりとした味が口の中でホロホロと口溶けの良いケーキです。</div>,
+              // シフォン
+              <div>ふんわりもっちりとした口当たりの良いシフォンケーキです。季節によって商品の味は変わります。生クリームを絡めてお召し上がりください。</div>,
+              // タルトフレーズ
+              <div>外は香ばしく中はしっとりと食べ応えのあるタルトにカスタードクリームと甘酸っぱいイチゴがバランス良く贅沢に楽しめる人気商品です。</div>,
+              // チーズケーキ
+              <div>じっくりと低温で焼き上げ、甘みをおさえたさっぱりと食べやすいチーズケーキです。</div>,
+              // /レアチーズ
+              <div>クリームチーズを生クリームとメレンゲを使ってふんわりとした食感に仕上げました。<br/>チーズに相性ぴったりのラズベリーが中にアクセントで組み合わさっています。</div>,
+              // 生デコ
+              <div>ふわふわのスポンジに口溶けの良い純生クリームとイチゴをサンドしてフルーツを飾りつけ。<br/>バースデーパーティーに人気の商品です。</div>
+            ]
+          }}/>
         </div>
       </div>
     </div>
