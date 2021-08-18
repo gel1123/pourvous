@@ -1,10 +1,43 @@
 .app-card {
-    background-color: rgba(100, 0, 0, 0.3);
-    border: 1px dotted;
-    height: 220px;
-    width: 150px;
-    margin: 8px
+    background-color: khaki;
+    width: 40%;
+    margin: 8px;
+    padding: 8px;
+    position: relative;
 }
 .app-card-wide {
-    width: 300px;
+    width: 90%;
+}
+.app-card-name {
+    font-family: 超極細ゴシック体;
+    font-size: 16px;
+}
+.app-card-img {
+    width: 100%;
+    margin: auto;
+    opacity: 0;
+    animation: show 1s ease-in both;
+}
+.app-card-mes {
+    animation: show 1s ease-in both;
+    font-size: 12px;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.imgbox {
+    width:95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+.imgbox-dummy {
+    opacity: 0;
 }
