@@ -86,7 +86,39 @@ function App() {
         </nav>
       </div>
       <div className="app-body">
+        <div className="app-title">
+          <h2>
+            {/* <span className="catchcopy">
+              <span>「チョコレートケーキが得意」な</span><span>洋菓子屋さん</span>
+            </span><br/>
+            <span className="shopname">
+              <span>pour vous</span><span>（プール・ヴー）</span>
+            </span> */}
+            <span className="shopname-before">PÂTISSERIE</span><br/>
+            <div className="shopname-body">
+              <span className="shopname">Pour Vous</span>
+              <span className="shopname-after">TOMIGUSUKU</span>
+            </div>
+          </h2>
+        </div>
+        <hr className="app-title-bar"/>
         <div className="app-heading">
+          <div className="app-heading-message">
+            <p>
+              <span>おいしいケーキを作りたい、</span><br/>
+              <span>思わず笑顔がこぼれるケーキをお届けしたい。</span>
+            </p>
+            <p>
+              <span>そんな思いでメンバー一同</span><br/>
+              <span>Happyな気持ちでケーキ作りをしています。</span>
+            </p>
+            <p>
+              <span>地元に愛されるケーキ屋さんとして</span><br/>
+              <span>豊見城で今日もみなさまに</span><br/>
+              <span>美味しいケーキをおとどけします</span>
+            </p>
+          </div>
+          <div className="app-heading-message-dummy"></div>
           <img src={header_img} alt="トップ画像"/>
         </div>
         <div className="app-main">

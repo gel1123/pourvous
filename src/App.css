@@ -1,6 +1,10 @@
 img {
     width: 100%;
 }
+span {
+    /* 半端な改行を防止 */
+    display: inline-block;
+}
 .app-base {
     height: 100%;
 }
@@ -13,6 +17,7 @@ img {
     padding: 12px;
     background-color: rgba(97, 47, 12, 0.7);
     color: white;
+    z-index: 11;
 }
 .app-header-dummy {
     width: 100%;
@@ -26,7 +31,7 @@ img {
     text-align: center;
     position: fixed;
     left: 0px;
-    z-index: 1;
+    z-index: 11;
     font-size: 12px;
 }
 .app-header-ham {
@@ -36,7 +41,7 @@ img {
     text-align: center;
     position: fixed;
     font-size: 24px;
-    z-index: 10;
+    z-index: 111;
 }
 .app-menu {
     background-color: white;
@@ -46,13 +51,62 @@ img {
     text-align: center;
     overflow-y: scroll;
     box-sizing: border-box;
+    z-index: 111;
 }
 .app-body {
     transition: all 1s 0s ease;
 }
+.app-title {
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+    padding-top: 32px;
+    padding-left: 24px;
+}
+.shopname {
+    font-family: 超極細ゴシック体;
+    font-size: 32px;
+    margin-right: 12px;
+}
+.shopname-before, .shopname-after {
+    font-family: 超極細ゴシック体;
+    font-size: 20px;
+    margin-right: 12px;
+}
+.shopname-body {
+    width: 100%;
+    text-align: center;
+}
+/* .catchcopy {
+    font-family: 超極細ゴシック体;
+    font-size: 16px;
+} */
+.app-title-bar {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 32px;
+}
 .app-heading {
     width: 100%;
     margin: auto;
+}
+.app-heading-message {
+    position: absolute;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 12px;
+    background-color: rgba(97, 47, 12, 0.4);
+    color: white;
+    z-index: 1;
+}
+.app-heading-message-dummy {
+    height: 40px;
 }
 .app-main {
     display: flex;
