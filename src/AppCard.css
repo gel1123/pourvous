@@ -53,3 +53,52 @@
 .imgbox-dummy {
     opacity: 0;
 }
+.画像送りの矢印エリア {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px auto 8px;
+}
+.左側の矢印エリア {
+    display: inline-block;
+    flex-grow: 1;
+    width: 100%;
+}
+.右側の矢印エリア {
+    display: inline-block;
+    flex-grow: 1;
+    width: 100%;
+}
+.左矢印 {
+    font-family: 超極細ゴシック体;
+    border-top: solid rgb(255, 245, 225);
+    border-left: solid rgb(255, 245, 225);
+    height: 0.8em;
+    width: 0.8em;
+    margin-left: 8px;
+    margin-right: auto;
+    transform:rotate(-45deg);
+}
+.右矢印 {
+    font-family: 超極細ゴシック体;
+    border-bottom: solid rgb(255, 245, 225);
+    border-right: solid rgb(255, 245, 225);
+    height: 0.8em;
+    width: 0.8em;
+    margin-right: 8px;
+    margin-left: auto;
+    transform:rotate(-45deg);
+    
+}
+.索引 {
+    display: inline-block;
+    flex-grow: 1;
+    width: 100%;
+    margin: auto 8px;
+    max-width: 16px;
+    height: 0.6em;
+}
+.説明 {
+    min-height: 80px;
+}
