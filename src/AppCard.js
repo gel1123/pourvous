@@ -5,22 +5,44 @@ function AppCard(props) {
 
   const d = props.data;
   const [index, setIndex] = useState(0);
+  const [intervalId, setIntervalId] = useState(0);
 
-  console.log("rendering");
+  const 左矢印押下 = () => {
+    clearInterval(intervalId);
+    if (index === 0) {
+      const next = d.imgList.length-1;
+      console.log(next, d.imgList[next]);
+      setIndex(next);
+    } else {
+      const next = (index-1)%d.imgList.length
+      console.log(next, d.imgList[next]);
+      setIndex(next);
+    }
+  };
+  const 右矢印押下 = () => {
+    clearInterval(intervalId);
+    const next = (index+1)%d.imgList.length;
+    console.log(next, d.imgList[next]);
+    setIndex(next);
+  };
+
+  // console.log("rendering");
 
   useEffect(() => {
     if (d.imgList) {
-      const interval = setInterval(() => {
-        console.log((index+1)%d.imgList.length, d.imgList[(index+1)%d.imgList.length]);
-        setIndex((index+1)%d.imgList.length);
-      }, 4500);
-      return () => clearInterval(interval);
+      const id = setInterval(() => {
+        const next = (index+1)%d.imgList.length;
+        console.log(next, d.imgList[next]);
+        setIndex(next);
+      }, d.delay);
+      setIntervalId(id);
+      return () => clearInterval(id);
     }
   }, [index, d.imgList]);
 
   return (
   <div>
-    {d.title ? <h2 className="app-card-title">{d.title}</h2> : null}
+    {d.title ? <h3 className="app-card-title">{d.title}</h3> : null}
     <div className="app-card">
       <div>
         {
@@ -49,11 +71,30 @@ function AppCard(props) {
             : null
         }
       </div>
-      <div>
+      <div className="画像送りの矢印エリア">
+        <div className="左側の矢印エリア"><div className="左矢印" onClick={左矢印押下}></div></div>
+        {
+          d.imgList.map((image, i) => {
+            return <div 
+              key={i}
+              className={"索引 索引" + i + " " + d.nameList[i]}
+              style={
+                i === index ?
+                  {backgroundColor: "rgba(255, 245, 225, 1)"}
+                  : {backgroundColor: "rgba(255, 245, 225, 0.5)"}
+              } 
+            ></div>;
+          })
+        }
+        <div className="右側の矢印エリア"><div className="右矢印" onClick={右矢印押下}></div></div>
+      </div>
+      <div className="説明" style={
+        d.minHeight ? {minHeight: d.minHeight} : null
+      }>
         {
           d.imgList && d.imgList.map((image, i) => {
             return index === i ? 
-              <div className="app-card-mes">{d.mesList[i]}</div>
+              <div key={i} className="app-card-mes">{d.mesList[i]}</div>
               : null
           })
         }

@@ -43,6 +43,9 @@ span {
     font-size: 24px;
     z-index: 111;
 }
+.ham-button {
+    transition: opacity 0.5s 0s ease;
+}
 .app-menu {
     background-color: white;
     position: fixed;
@@ -77,18 +80,29 @@ span {
     width: 100%;
     text-align: center;
 }
-/* .catchcopy {
-    font-family: 超極細ゴシック体;
-    font-size: 16px;
-} */
 .app-title-bar {
     width: 80%;
     margin: auto;
     margin-bottom: 32px;
 }
+.見出しエリア {
+    width: 95%;
+    margin: auto;
+}
+.見出し {
+    font-family: 超極細ゴシック体;
+    font-size: 24px;
+    margin: 0 auto 24px;
+    color: rgba(97, 47, 12, 1);
+    border-left: 4px solid rgba(97, 47, 12, 0.7);
+    border-bottom: 1px solid rgba(97, 47, 12, 0.7);
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
 .app-heading {
     width: 100%;
-    margin: auto;
+    margin: 0px auto 0px;
 }
 .app-heading-message {
     position: absolute;
@@ -140,4 +154,104 @@ ul {
 }
 li {
     margin-bottom: 15px;
+}
+.余白 {
+    height: 48px;
+}
+.小余白 {
+    height: 14px;
+}
+.shopinfo-area {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+}
+.shopinfo-body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    font-size: 14px;
+}
+.address, .address以外 {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 45%;
+}
+.紹介文 {
+    width: 90%;
+    font-size: 14px;
+    margin: 18px auto 18px;
+}
+.下端余白なし {
+    margin-bottom: 0px;
+}
+.小見出し {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 超極細ゴシック体;
+    font-size: 16px;
+    margin: 0 auto 4px;
+    color: rgba(97, 47, 12, 1);
+    border-left: 4px solid rgba(97, 47, 12, 0.7);
+    border-bottom: 1px solid rgba(97, 47, 12, 0.7);
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+}
+.小見出し2前テキスト {
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 超極細ゴシック体;
+    font-size: 12px;
+    margin: 0 auto 4px;
+    color: rgba(97, 47, 12, 1);
+}
+.小見出し2 {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+    font-family: 超極細ゴシック体;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: rgba(97, 47, 12, 1);
+}
+.小見出し2::before, .小見出し2::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px; /* 線の太さ */
+    background: rgba(97, 47, 12, 0.7);; /* 線の色 */
+    margin:0 4px 0; /* 文字と線の余白 */
+}
+.小小見出し {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 超極細ゴシック体;
+    font-size: 14px;
+    margin: 0 auto 4px;
+}
+.左余白1文字 {
+    margin-right: 1em;
+}
+.左右余白 {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0 auto 0;
+}
+.余白なし {
+    margin: 0;
+    padding: 0;
+}
+.注釈 {
+    font-size: smaller;
+}
+.商品紹介 {
+    width: 95%;
+    margin: auto;
 }
