@@ -44,7 +44,7 @@ span {
     z-index: 111;
 }
 .ham-button {
-    transition: opacity 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
 }
 .app-menu {
     background-color: white;
