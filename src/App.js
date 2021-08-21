@@ -37,6 +37,10 @@ import img_ykg5 from './img/焼き菓子/焼きドーナツ_コーヒー01.jpg';
 import img_ykg6 from './img/焼き菓子/焼きドーナツ_チョコ01.jpg';
 import img_ykg7 from './img/焼き菓子/焼ドーナツ_プレーン01.jpg';
 
+// その他
+import img_other01 from './img/その他/ショーケース01.jpg';
+import img_other02 from './img/その他/店外観01.jpg';
+
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const onClickHam = (e) => {
@@ -47,10 +51,10 @@ function App() {
       <header className="app-header">
         <span className="app-header-ham" onClick={onClickHam}>
           <span class="ham-button" style={
-            showMenu ? {position:"absolute", left:6, opacity: 1} : {position:"absolute", left:6, opacity: 0}
+            showMenu ? {position:"absolute", left:6, opacity: 1, transform:"rotate(0deg)"} : {position:"absolute", left:6, opacity: 0, transform:"rotate(180deg)"}
           }>×</span>
           <span class="ham-button" style={
-            showMenu ? {position:"absolute", left:6, opacity: 0} : {position:"absolute", left:6, opacity: 1}
+            showMenu ? {position:"absolute", left:6, opacity: 0, transform:"rotate(180deg)"} : {position:"absolute", left:6, opacity: 1, transform:"rotate(0deg)"}
           }>≡</span>
         </span>
         <span className="app-header-center">「チョコレートケーキが得意」な洋菓子屋さん<br/>pour vous（プール・ヴー）</span>
@@ -161,6 +165,14 @@ function App() {
           <div className="shopinfo-area">
             <div className="見出しエリア">
               <h2 className="見出し 下端余白なし">SHOP INFO</h2>
+              <div className="見出し画像">
+                <div className="小余白"></div>
+                <img src={img_other01} alt="見出し画像" style={{
+                  // height: "60px",
+                  // // objectFit: "none",
+                  // position: "absolute"
+                }}/>
+              </div>
             </div>
             <div className="紹介文">
               <h3 className="余白なし">
